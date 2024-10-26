@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="angka1" id="angka1">
+        <select name="operator" id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value=""></option>
+            <option value="/">/</option>
+            </select>
+            <input type="text" name="angka2" id="angka2">
+            <button type="button" onclick="kalkulator()">hitung</button>
+            
+            <input type="text" nama="hasil" id="hasil">
+    </form>
+</body>
+<script>
+    function kalkulator(){
+        var angka11 = parseFloat(prompt('masukkan angka pertama'));
+        var angka2 = parseFloat(prompt('masukkan angka kedua'));
+        var operator = prompt('masukkan operator(+,-,*,/)');
+        var hasil = 0
+        if (operator === '+'){
+             hasil = angka1+angka2;
+        }else if(operator === '-'){
+            hasil = angka1-angka2;
+        }else if(operator === '*'){
+            hasil = angka1*angka2;
+        }else if(operator === '/'){
+            hasil = angka1/angka2;
+        }
+        document.getElementById('hasil').innerHTML = hasil;
+    }
+</script>
+</html>
